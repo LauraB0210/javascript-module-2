@@ -15,6 +15,18 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+const list = document.querySelectorAll("p");
+    console.log(list);
+
+const firstDiv  = document.querySelector("div");
+    console.log(firstDiv);
+
+const jumboTromText = document.querySelector("#jumbotron-text");
+    console.log(jumboTromText);
+
+
+const allTheP = document.querySelectorAll(".primary-content p");
+    console.log(allTheP);
 
 
 /*
@@ -24,6 +36,12 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
+const myButton = document.querySelector("#alertBtn");
+myButton.addEventListener("click", alertSaludo);
+
+function alertSaludo(){
+    alert("Thanks for visiting Bikes for Refugees!");
+}
 
 /*
 Task 3
