@@ -50,6 +50,14 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
+const myPage = document.querySelector("#bgrChangeBtn");
+myPage.addEventListener("click", cambioColor);
+
+function cambioColor (){
+let myElement = document.querySelector("#body");
+myElement.style.backgroundColor = "pink";
+}
+
 
 /*
 Task 4
@@ -58,6 +66,12 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
+let moreInfo = document.querySelector("#addTextBtn");
+moreInfo.addEventListener("click", alertInfo);
+
+ function alertInfo() {
+   alert("LEARN MORE");
+ }
 
 
 /*
