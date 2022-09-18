@@ -78,15 +78,21 @@ document.getElementById("mainArticles").appendChild(node);
 
 }
 
-
-
-
 /*
 Task 5
 ======
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+const myLinks = document.querySelector("#largerLinksBtn");
+myLinks.addEventListener("click", cambioLetra);
+
+function cambioLetra (){
+let links = document.querySelectorAll("a");
+function cambiaLetraElemento(e){ e.style.fontSize = "x-large";}
+links.forEach(cambiaLetraElemento)
+}
 
 
 /*
@@ -97,6 +103,18 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
+
+ let moreInfo2 = document.querySelector("#addArticleBtn");
+ moreInfo2.addEventListener("click", parrafo);
+
+ 
+function parrafo() {
+const node = document.createElement("p");
+const textnode = document.createTextNode("LEARN MORE");
+node.appendChild(textnode);
+document.getElementById("mainArticles").appendChild(node);
+}
 
 /*
 Task 7
