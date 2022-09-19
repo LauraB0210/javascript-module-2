@@ -111,7 +111,7 @@ Also clear the text inside the input field
  
 function parrafo() {
 const node = document.createElement("p");
-const textnode = document.createTextNode("LEARN MORE");
+const textnode = document.createTextNode( );
 node.appendChild(textnode);
 document.getElementById("mainArticles").appendChild(node);
 }
@@ -125,3 +125,24 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 
+// const myPage2 = document.querySelector("#bgrChangeBtn");
+// myPage2.addEventListener("click", cambioColor2);
+
+// function cambioColor2 (){
+// let myElement = document.querySelector("#body");
+// myElement.style.backgroundColor = "pink";
+
+// }
+
+
+const colors = ["#EEDBF4", "#F09CE2", " #ff99c2", "#ddff99", "#ffff99"];
+const backGroundColor = document.querySelector("#body");
+let i = 0;
+bgrChangeBtn.addEventListener("click", () => {
+    backGroundColor.style.backgroundColor = colors[i]
+    if (i < colors.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+})
