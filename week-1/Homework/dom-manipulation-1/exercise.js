@@ -18,6 +18,7 @@ Write JavaScript below that logs:
 const list = document.querySelectorAll("p");
     console.log(list);
 
+
 const firstDiv  = document.querySelector("div");
     console.log(firstDiv);
 
@@ -71,6 +72,7 @@ When a user clicks the ‘Add some text’ button, a new paragraph should be add
 
  
 function parrafo() {
+    console.log("estoy aqui funcion parrafo");
 const node = document.createElement("p");
 const textnode = document.createTextNode("LEARN MORE");
 node.appendChild(textnode);
@@ -105,16 +107,17 @@ Also clear the text inside the input field
 */
 
 
- let moreInfo2 = document.querySelector("#addArticleBtn");
- moreInfo2.addEventListener("click", parrafo);
+let moreInfo2 = document.querySelector("#addArticleBtn");
+moreInfo2.addEventListener("click", parrafos);
 
  
-function parrafo() {
+function parrafos() {
 const node = document.createElement("p");
-const textnode = document.createTextNode( );
+const textdinamic = document.querySelector(".form-control").value;
+const textnode = document.createTextNode(textdinamic);
 node.appendChild(textnode);
 document.getElementById("mainArticles").appendChild(node);
-}
+ }
 
 /*
 Task 7
@@ -124,15 +127,6 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-
-// const myPage2 = document.querySelector("#bgrChangeBtn");
-// myPage2.addEventListener("click", cambioColor2);
-
-// function cambioColor2 (){
-// let myElement = document.querySelector("#body");
-// myElement.style.backgroundColor = "pink";
-
-// }
 
 
 const colors = ["#EEDBF4", "#F09CE2", " #ff99c2", "#ddff99", "#ffff99"];
