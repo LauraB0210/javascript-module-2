@@ -31,3 +31,21 @@ function cambioColorO (){
     myOrange.style.backgroundColor = "#f0ad4e"
 }
 
+const myOrange1 = document.querySelector("#orangeBtn");
+myOrange1.addEventListener("click", cambioColorO1);
+
+function cambioColorO1 (){
+    let myOrange1 = document.querySelector(".btn-lrg");
+    myOrange1.style.backgroundColor = "#5751fd"
+}
+
+const myOrange2 = document.querySelector("#orangeBtn");
+myOrange2.addEventListener("click", cambioColorO2);
+
+function cambioColorO2 (){
+    let myOrange2 = document.querySelector(".btn-secondary");
+    myOrange2.style.backgroundColor = "#8c9c08"
+}
+
+
+
