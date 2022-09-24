@@ -44,8 +44,35 @@ myOrange2.addEventListener("click", cambioColorO2);
 
 function cambioColorO2 (){
     let myOrange2 = document.querySelector(".btn-secondary");
-    myOrange2.style.backgroundColor = "#8c9c08"
+    myOrange2.style.backgroundColor = "#31b0d5"
+    myOrange2.style.color = "white"
 }
+
+const myGreen = document.querySelector("#greenBtn");
+myGreen.addEventListener("click", cambioColorG);
+
+function cambioColorG(){
+    let myGreen = document.querySelector(".jumbotron");
+    myGreen.style.backgroundColor = "#87ca8a"
+}
+
+const myGreen1 = document.querySelector("#greenBtn");
+myGreen1.addEventListener("click", cambioColorG1);
+
+function cambioColorG1(){
+    let myGreen1 = document.querySelector(".btn-lrg");
+    myGreen1.style.backgroundColor = "black"
+}
+
+const myGreen2 = document.querySelector("#greenBtn");
+myGreen2.addEventListener("click", cambioColorG2);
+
+function cambioColorG2(){
+    let myGreen2 = document.querySelector(".btn-secondary");
+    myGreen2.style.backgroundColor = "#8c9c08"
+}
+
+
 
 
 
