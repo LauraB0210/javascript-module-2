@@ -10,14 +10,19 @@ let house = {
   currentOwner: {
     firstName: "Margaret",
     lastName: "Conway",
-  },
+  }, 
 };
+
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
 
   WRITE YOUR CODE BELOW
 */
+const changeAdress = '51 Berkley Road'
+const changePreviusOwners = ["Brian M.", "Fiona S."]
+const changeCurrenteOwner = "Montgomery"
+
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
