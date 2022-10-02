@@ -15,6 +15,18 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach((personas) => {
+    const nombre = document.createElement("h1");
+    const trabajo = document.createElement("h2");
+
+    nombre.textContent = personas.name;
+    trabajo.textContent = personas.job;  
+
+    content.appendChild(nombre);
+    content.appendChild(trabajo);
+    
+    
+  });
 }
 
 /**
