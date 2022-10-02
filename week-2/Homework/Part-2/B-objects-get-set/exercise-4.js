@@ -3,7 +3,7 @@
 */
 
 var dog = {
-    name: 'Billy',
+    name: 'Billy,',
     wantsToPlay: false
 };
 
