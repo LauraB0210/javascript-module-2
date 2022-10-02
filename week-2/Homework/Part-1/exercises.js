@@ -79,7 +79,27 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  const listaLibros = document.createElement("ul");
+
+  books.forEach(libros => {
+    const boxForBook = document.createElement("li");
+    const bookName = document.createElement("p");
+    bookName.textContent = libros.title + "-" + libros.author;
+    const portadasLibros =document.createElement("img");
+    portadasLibros.setAttribute("src", libros.img);
+    boxForBook.appendChild(bookName);
+    boxForBook.appendChild(portadasLibros);
+    listaLibros.appendChild(boxForBook);
+
+    if (libros.alreadyRead){
+      boxForBook.style.backgroundColor = "green"
+    }
+
+    else {
+      boxForBook.style.backgroundColor = "red"
+    }
+  })
+  content.appendChild(listaLibros);
 }
 
 //
@@ -108,16 +128,19 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
+    img: "https://images.cdn2.buscalibre.com/fit-in/360x360/d2/87/d28753516bb9819d77a77a19431251fb.jpg",
     alreadyRead: false
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51iSxrqL+sL.jpg",
     alreadyRead: true
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
+    img: "https://m.media-amazon.com/images/I/51W1sBPO7tL._SX380_BO1,204,203,200_.jpg",
     alreadyRead: true
   }
 ];
