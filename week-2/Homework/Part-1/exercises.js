@@ -24,7 +24,7 @@ function exerciseOne(arrayOfPeople) {
 
     content.appendChild(nombre);
     content.appendChild(trabajo);
-    
+
     
   });
 }
@@ -37,7 +37,16 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  const lista = document.createElement("ul");
+  content.appendChild(lista);
+
+  shopping.forEach((cosas) => {
+    const item = document.createElement("li");
+    item.textContent = cosas;
+
+    lista.appendChild(item);
+
+  })
 }
 
 /**
