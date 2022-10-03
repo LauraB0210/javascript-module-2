@@ -40,11 +40,38 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms =  travelDestinations
+.filter(function (travelDestination) {
+  return travelDestination.distanceKms < 500;
+})
+.map(function (travelDestination) {
+  return travelDestination.destinationName;
+});
+// Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = travelDestinations
+.filter(function (travelDestination) {
+  return travelDestination.transportations.includes("ferry");
+})
+.map(function (travelDestination) {
+  return travelDestination.destinationName;
+});
+// Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+.filter(function (travelDestination) {
+  return (
+    travelDestination.distanceKms > 300 &&
+    travelDestination.transportations.includes("train")
+  )
+})
+.map(function (travelDestination) {
+    return travelDestination.destinationName;})
+
+    const watch = destinationNamesMoreThan300KmsAwayByTrain.forEach(function(destinationNames){
+        console.log(destinationNames)
+    })// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
