@@ -11,3 +11,13 @@ const studentGrades = {
   // Prints
   // TOM - 20
   // ABDUL - 19
+
+  const studentKey = Object.keys(studentGrades);
+  const studentvalues = Object.values(studentGrades);
+  
+  studentvalues.forEach((studentvalues, key) =>{
+    if (studentvalues >= 18 ){
+      //LLamo a la variable de las llaves y le agrego la mayus. y coloco los values
+    console.log(`${studentKey[key].toUpperCase()} - ${studentvalues}`);
+    }
+})
