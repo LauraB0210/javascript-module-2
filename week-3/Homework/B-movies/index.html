@@ -12,6 +12,17 @@
     body {
       padding: 30px;
     }
+    form {
+      padding: 5%;
+      border: 1px solid maroon;
+      height: 100%;
+      width: 40%;
+    }
+
+    form *{
+      display: block;
+      margin: 5px;
+    }
   </style>
 </head>
 
@@ -20,8 +31,23 @@
     <div class="jumbotron">
       <h1>My movies</h1>
       <div id="all-movies">
-        <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
+        <p class="alert alert-info">
+          Number of movies: <span id="movies-number"></span>
+        </p>
       </div>
+    </div>
+
+    <form action="">
+      <label for="">Title:</label>
+      <input type="text" name="" id="" />
+      <label for="">Director:</label
+      ><input type="text" name="" id="" />
+      <label for="">Type:</label
+      ><input type="text" name="" id="" />
+      <label for="">Have Watched:</label
+      ><input type="text" name="" id="" />
+      <input id="button" type="submit" value="Enviar">
+    </form>
     </div>
     <script src="exercise.js"></script>
 </body>
