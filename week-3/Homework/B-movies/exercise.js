@@ -76,7 +76,7 @@ function showMovies(movies){
 // create a new movie object for your favorite movie
 
 function addMovie(movies, text) {
-  if (text[3]==="true"){
+  if (text[3]==="true") {
     movies.push({
       title: text[0],
       director: text[1],
@@ -95,11 +95,11 @@ function addMovie(movies, text) {
 }
 
 function cleaning(){
-  const part = document.querySelector("all-movies").querySelectorAll("p+p");
+  const part = document.querySelector("#all-movies").querySelectorAll("p+p");
   console.log(part);
   part.forEach((p) => {
   p.remove();
-  })
+  });
 }
 
 
