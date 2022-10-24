@@ -4,7 +4,7 @@ let timeRemaining
 
 function prueba() {
 
-  if (alarmSet >= 0) {
+if (alarmSet >= 0) {
     console.log(alarmSet);
     if (alarmSet < 10) {
       timeRemaining.textContent = "Time Remaining: 00:0" + alarmSet;
@@ -51,16 +51,11 @@ function setAlarm() {
     timeclock = setInterval(prueba, 1000,alarmSet = document.querySelector("#alarmSet").value, timeRemaining = document.querySelector("#timeRemaining"));
   }}
 
-  
-
- function pauseAlarm(){
-   clearInterval(timeclock)
-   timeclock =null
-   }
-
-
-
-
+function pauseAlarm(){
+  clearInterval(timeclock)
+  timeclock=null
+   audio.pause();
+  }
 
 
 // DO NOT EDIT BELOW HERE
@@ -81,8 +76,8 @@ function playAlarm() {
   audio.play();
 }
 
-function pauseAlarm() {
-  audio.pause();
-}
+// function pauseAlarm() {
+//   audio.pause();
+// }
 
 window.onload = setup;

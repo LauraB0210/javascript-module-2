@@ -17,8 +17,31 @@ const myTimeout = setInterval(myGreeting, 5000)
 
 function myGreeting (){
     const colorBody = document.querySelector("body")
-    colorBody.style.backgroundColor = colorBody.style.backgroundColor == "blue" ? "pink" : "blue"
-}
+    console.log(colorBody.style.backgroundColor);
+    
+    if (colorBody.style.backgroundColor == "yellow"){
+        colorBody.style.backgroundColor = "pink"
+    }
+
+     else if (colorBody.style.backgroundColor == "pink"){
+        colorBody.style.backgroundColor = "red"
+    }
+
+     else if (colorBody.style.backgroundColor == "red"){
+        colorBody.style.backgroundColor = "yellow"
+    }
+    else if (! colorBody.style.backgroundColor){
+        colorBody.style.backgroundColor = "yellow"
+    }
+
+    // if (colorBody.style.backgroundColor != "blue" && colorBody.style.backgroundColor != "pink" && colorBody.style.backgroundColor != "red"){
+    //     colorBody.style.backgroundColor = "blue"
+    // }
+
+
+//     colorBody.style.backgroundColor = colorBody.style.backgroundColor == "blue" ? "pink" : "blue"
+ }
+
 function  pausaColor(){
     clearInterval(myTimeout);
 }
