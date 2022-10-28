@@ -1,63 +1,64 @@
 // Write your code here
+const imagenesPets = ["https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759__480.jpg",
+"https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__480.jpg",
+"https://cdn.pixabay.com/photo/2014/12/10/05/50/english-bulldog-562723__480.jpg",
+"https://cdn.pixabay.com/photo/2017/04/06/14/16/australian-shepherd-2208371__480.jpg=",
+"https://cdn.pixabay.com/photo/2017/02/15/12/12/cat-2068462__480.jpg",
+"https://cdn.pixabay.com/photo/2018/03/26/02/05/cat-3261420__480.jpg"]
 
-const imagenesLam = [
-  "https://cdn.motor1.com/images/mgl/4JyZA/s1/lamborghini-aventador-lp-780-4-ultimae.jpg",
-  "https://www.diariomotor.com/imagenes/picscache/750x/lamborghini-huracan-evo-2019-0119-017_750x.jpg",
-  "https://www.autonocion.com/wp-content/uploads/2020/03/lamborghini-svj.jpg",
-  "https://megaricos.com/wp-content/uploads/2021/01/shutterstock_1532333705.jpg"
-]
-
-console.log(imagenesLam);
+//QuerySelector
 const autoBackBtn = document.querySelector('#autoBackBtn')
-const backBtn = document.querySelector('#backBtn')
+const anteriorBtn = document.querySelector('#anteriorBtn')
 const stopBtn = document.querySelector('#stopBtn')
-const nextBtn = document.querySelector('#nextBtn')
+const siguienteBtn = document.querySelector('#siguienteBtn')
 const autoNextBtn = document.querySelector('#autoNextBtn')
-const imagenesBo = document.querySelector('#imageCar')
+const imagenesEl = document.querySelector('#imgPets')
 let index = 0
-let toNext 
-let toBack
+let bucleAdelante 
+let bucleAtras
 
-imagenesBo.src = imagenesLam[index]
+imagenesEl.src= imagenesPets[index]
 
-nextBtn.addEventListener('click',() => siguiente())
-backBtn.addEventListener('click',() => anterior())
+//AddEventListener
+siguienteBtn.addEventListener('click',() => siguiente())
+anteriorBtn.addEventListener('click',() => anterior())
 autoNextBtn.addEventListener('click',() => autoNext())
 autoBackBtn.addEventListener('click',() => autoBack())
 stopBtn.addEventListener('click',() => Stop())
 
-function next() {
-    if (index == imagenesLam.length -1) {index = -1 ;
+//Funciones
+function siguiente() {
+    if (index == imagenesPets.length -1) {index = -1 ;
     }
     index++;
-    imagenesBo.src = imagenesLam [index];
-    console.log(index, imagenesLam[index]);
+    imagenesEl.src = imagenesPets [index];
+    console.log(index, imagenesPets[index]);
 };
 
 function autoNext(){
-    clearInterval(toBack)
-     toNext = setInterval("next()",1000);
+    clearInterval(bucleAtras)
+     bucleAdelante = setInterval("siguiente()",1000);
 };
 
 function autoBack(){
-    clearInterval(toNext)
-     toBack = setInterval("back()",1000);
+    clearInterval(bucleAdelante)
+     bucleAtras = setInterval("anterior()",1000);
 };
 
 function Stop(){
-    if (toNext != undefined) {
-        clearInterval(toNext)
+    if (bucleAdelante != undefined) {
+        clearInterval(bucleAdelante)
     }
-    if (toBack != undefined) {
-        clearInterval(toBack)
+    if (bucleAtras != undefined) {
+        clearInterval(bucleAtras)
     }
 };
 
-function back (){
+function anterior (){
     if(index < 1){
-        index = imagenesLam.length 
+        index = imagenesPets.length 
     }
     index --
-    imagenesBo.src = imagenesLam[index]
-    console.log(index, imagenesLam[index]);
+    imagenesEl.src = imagenesPets[index]
+    console.log(index, imagenesPets[index]);
 };
